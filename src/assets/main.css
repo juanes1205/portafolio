@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @plugin "daisyui" {
   themes:
-    black --default,
-    lofi --prefersdark;
+    black --default --prefersdark,
+    lofi;
+}
+
+html {
+  scroll-behavior: smooth;
 }
