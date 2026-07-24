@@ -3,5 +3,14 @@
     "Home": "Inicio",
     "Proyects": "Proyectos",
     "Contact": "Contacto"
+  },
+  "hero": {
+    "title": "Hola, soy ",
+    "available": "Disponible para trabajar",
+    "description": "Ingeniero de software con experiencia en el desarrollo de aplicaciones web y móviles.",
+    "actions": {
+      "contact": "Contáctame",
+      "cv": "Descargar CV"
+    }
   }
 }

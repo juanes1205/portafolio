@@ -15,16 +15,17 @@ const currentTheme = ref(
 
 //Funcion para cambiar el idioma segun el estado del toggle
 const toggleLanguage = () => {
-  locale.value = currentLanguage.value ? "en" : "es";
+  currentLanguage.value = !currentLanguage.value;
+  locale.value = currentLanguage.value ? "es" : "en";
 };
 
 const themeClass = computed(() => {
-  return currentTheme.value === "black" ? "black" : "lofi";
+  return currentTheme.value === "black" ? "black" : "wireframe";
 });
 
 //funcion para cambiar el tema segun estado del toggle
 const toggleTheme = () => {
-  currentTheme.value = currentTheme.value === "black" ? "lofi" : "black";
+  currentTheme.value = currentTheme.value === "black" ? "wireframe" : "black";
   document.documentElement.setAttribute("data-theme", currentTheme.value);
 };
 </script>

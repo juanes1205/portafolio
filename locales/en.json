@@ -3,5 +3,15 @@
     "Home": "Home",
     "Proyects": "Proyects",
     "Contact": "Contact"
+  },
+
+  "hero": {
+    "title": "Hello, I'm ",
+    "available": "Available to work",
+    "description": "Software engineer with experience in web and mobile application development.",
+    "actions": {
+      "contact": "Contact me",
+      "cv": "Download CV"
+    }
   }
 }
