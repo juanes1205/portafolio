@@ -12,5 +12,11 @@
       "contact": "Contáctame",
       "cv": "Descargar CV"
     }
+  },
+  "stats": {
+    "visits": "Visitas",
+    "since": "Desde",
+    "projects": "Proyectos",
+    "frameworks": "Lenguajes/Frameworks"
   }
 }

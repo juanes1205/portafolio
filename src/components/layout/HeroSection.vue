@@ -34,17 +34,17 @@ import { Icon } from "@iconify/vue";
           <div class="flex flex-wrap gap-2 mt-4 justify-center">
             <a
               href="mailto:esteban.restrepo.11@gmail.com"
-              class="btn btn-outline"
+              class="btn btn-outline rounded"
             >
               <Icon icon="mdi:email" width="24" height="24" />
               {{ $t("hero.actions.contact") }}
             </a>
-            <a href="" download class="btn btn-outline">
+            <a href="" download class="btn btn-outline rounded">
               <Icon icon="pepicons-pop:cv" width="24" height="24" />
               {{ $t("hero.actions.cv") }}
             </a>
             <a
-              class="btn btn-outline ml-2"
+              class="btn btn-outline rounded"
               href="https://github.com/juanes1205"
               target="_blank"
             >

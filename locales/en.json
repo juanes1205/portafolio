@@ -13,5 +13,12 @@
       "contact": "Contact me",
       "cv": "Download CV"
     }
+  },
+
+  "stats": {
+    "visits": "Visits",
+    "since": "Since",
+    "projects": "Projects",
+    "frameworks": "Languages/Frameworks"
   }
 }
