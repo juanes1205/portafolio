@@ -1,16 +1,16 @@
 {
   "navbar": {
     "Home": "Home",
-    "Proyects": "Proyects",
+    "Projects": "Projects",
     "Contact": "Contact"
   },
 
   "hero": {
-    "title": "Hello, I'm ",
-    "available": "Available to work",
-    "description": "Software engineer with experience in web and mobile application development.",
+    "title": "Hi, I'm ",
+    "available": "Available for work",
+    "description": "Systems Engineer with 9 years of experience in web development, Cloud Infrastructure, DevOps, and Cybersecurity. I build secure, scalable, and production-ready applications using JavaScript, PHP, Node.js, Vue.js, React.js, and AWS.",
     "actions": {
-      "contact": "Contact me",
+      "contact": "Contact Me",
       "cv": "Download CV"
     }
   },
@@ -18,7 +18,34 @@
   "stats": {
     "visits": "Visits",
     "since": "Since",
-    "projects": "Projects",
-    "frameworks": "Languages/Frameworks"
+    "experience": "Years of Experience",
+    "applications": "Applications Supported",
+    "technologies": "Technologies",
+    "availability": "Availability"
+  },
+  "timeline": {
+    "section": {
+      "title": "Professional Experience"
+    },
+    "experience": {
+      "1": {
+        "title": "Cloud & On-Premises Infrastructure Lead",
+        "company": "Psicol S.A.S.",
+        "date": "July 2022 - June 2026",
+        "description": "Managed Cloud and On-Premises infrastructure across AWS, VMware, and Linux environments. Implemented automation, monitoring, cybersecurity, Docker, Active Directory, and provided support for more than 50 applications across Development, QA, and Production environments.",
+        "actions": {
+          "view": "View Details"
+        }
+      },
+      "2": {
+        "title": "IT Infrastructure Technician",
+        "company": "Vehículos del Camino",
+        "date": "November 2017 - July 2022",
+        "description": "Managed Windows and Linux servers, VMware and Hyper-V virtualization, Active Directory, corporate networking, relational databases, PowerShell automation, and infrastructure support for more than 200 users.",
+        "actions": {
+          "view": "View Details"
+        }
+      }
+    }
   }
 }

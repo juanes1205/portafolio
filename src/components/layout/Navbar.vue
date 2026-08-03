@@ -63,7 +63,7 @@ const toggleTheme = () => {
             <a>{{ t("navbar.Home") }}</a>
           </li>
           <li>
-            <a>{{ t("navbar.Proyects") }}</a>
+            <a>{{ t("navbar.Projects") }}</a>
           </li>
           <li>
             <a>{{ t("navbar.Contact") }}</a>
@@ -72,7 +72,7 @@ const toggleTheme = () => {
       </div>
     </div>
     <div class="navbar-center">
-      <a class="btn btn-ghost text-xl">Juan Esteban Restrepo Ossa</a>
+      <a class="btn btn-ghost text-xl text-blue-500">Juan Esteban Restrepo Ossa</a>
     </div>
     <div class="navbar-end">
       <!-- Toogle Theme -->

@@ -1,13 +1,13 @@
 {
   "navbar": {
     "Home": "Inicio",
-    "Proyects": "Proyectos",
+    "Projects": "Proyectos",
     "Contact": "Contacto"
   },
   "hero": {
     "title": "Hola, soy ",
     "available": "Disponible para trabajar",
-    "description": "Ingeniero de software con experiencia en el desarrollo de aplicaciones web y móviles.",
+    "description": "Ingeniero de Sistemas con experiencia en desarrollo de aplicaciones web, infraestructura Cloud, DevOps y ciberseguridad. Desarrollo soluciones escalables utilizando JavaScript, PHP, Node.js, Vue.js, React.js y tecnologías Cloud como AWS.",
     "actions": {
       "contact": "Contáctame",
       "cv": "Descargar CV"
@@ -16,7 +16,34 @@
   "stats": {
     "visits": "Visitas",
     "since": "Desde",
-    "projects": "Proyectos",
-    "frameworks": "Lenguajes/Frameworks"
+    "experience": "Años de Experiencia",
+    "applications": "Aplicaciones Soportadas",
+    "technologies": "Tecnologías",
+    "availability": "Disponibilidad"
+  },
+  "timeline": {
+    "section": {
+      "title": "Experiencia Profesional"
+    },
+    "experience": {
+      "1": {
+        "title": "Líder de Infraestructura Cloud y On-premise",
+        "company": "Psicol S.A.S.",
+        "date": "Julio 2022 - Junio 2026",
+        "description": "Administración de infraestructura Cloud y On-Premise sobre AWS, VMware y Linux. Implementación de automatización, monitoreo, ciberseguridad, Docker, Active Directory y soporte para más de 50 aplicaciones en entornos de Desarrollo, QA y Producción.",
+        "actions": {
+          "view": "Ver detalles"
+        }
+      },
+      "2": {
+        "title": "Auxiliar de Sistemas",
+        "company": "Vehículos del Camino",
+        "date": "Noviembre 2017 - Julio 2022",
+        "description": "Administración de servidores Windows y Linux, virtualización con VMware y Hyper-V, Active Directory, redes corporativas, bases de datos, automatización mediante PowerShell y soporte de infraestructura para más de 200 usuarios.",
+        "actions": {
+          "view": "Ver detalles"
+        }
+      }
+    }
   }
 }

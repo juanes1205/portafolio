@@ -1,5 +1,15 @@
 <script setup>
+import { computed } from "vue";
 import { Icon } from "@iconify/vue";
+import { useI18n } from "vue-i18n";
+
+const { locale } = useI18n();
+
+const cvUrl = computed(() => {
+  return locale.value === "es"
+    ? "/resume/CV_Juan_Esteban_Restrepo_Ossa_ES.pdf"
+    : "/resume/CV_Juan_Esteban_Restrepo_Ossa_EN.pdf";
+});
 </script>
 <template>
   <div class="hero min-h-screen p-10 pl-10 pr-10">
@@ -7,7 +17,7 @@ import { Icon } from "@iconify/vue";
       <img
         src="/imgs/me.png"
         alt="me"
-        class="hero-image max-w-60 md:max-w-60 lg:max-w-sm w-full h-auto mb-2 sm:mb-6 lg:mb-0"
+        class="w-full max-w-[220px] md:max-w-[260px] lg:max-w-[320px] h-auto"
         style="mask-image: linear-gradient(black 80%, transparent)"
       />
       <div>
@@ -39,7 +49,7 @@ import { Icon } from "@iconify/vue";
               <Icon icon="mdi:email" width="24" height="24" />
               {{ $t("hero.actions.contact") }}
             </a>
-            <a href="" download class="btn btn-outline rounded">
+            <a :href="cvUrl" download class="btn btn-outline rounded">
               <Icon icon="pepicons-pop:cv" width="24" height="24" />
               {{ $t("hero.actions.cv") }}
             </a>
