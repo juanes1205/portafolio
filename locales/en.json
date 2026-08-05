@@ -5,6 +5,10 @@
     "Contact": "Contact"
   },
 
+  "more": {
+    "text": "See more"
+  },
+
   "hero": {
     "title": "Hi, I'm ",
     "available": "Available for work",
@@ -45,6 +49,21 @@
         "actions": {
           "view": "View Details"
         }
+      }
+    }
+  },
+  "projects": {
+    "section": {
+      "title": "Projects"
+    },
+    "proy": {
+      "0": {
+        "title": "Inventory, Purchasing and Sales Management System (CVI)",
+        "description": "Web application designed to manage inventory, purchasing, and sales processes. It includes product, supplier, customer, and order management, inventory tracking, and reporting features to streamline business operations."
+      },
+      "1": {
+        "title": "Music Social Network",
+        "description": "Social networking web application for music enthusiasts, allowing users to share posts, discover artists, interact with the community, and manage music-related content through a modern and responsive interface."
       }
     }
   }

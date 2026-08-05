@@ -4,6 +4,9 @@
     "Projects": "Proyectos",
     "Contact": "Contacto"
   },
+  "more": {
+    "text": "Ver más"
+  },
   "hero": {
     "title": "Hola, soy ",
     "available": "Disponible para trabajar",
@@ -43,6 +46,21 @@
         "actions": {
           "view": "Ver detalles"
         }
+      }
+    }
+  },
+  "projects": {
+    "section": {
+      "title": "Proyectos"
+    },
+    "proy": {
+      "0": {
+        "title": "Sistema de Gestión de Inventario, Compras y Ventas (CVI)",
+        "description": "Aplicación web para la gestión integral de inventario, compras y ventas. Permite administrar productos, proveedores, clientes, órdenes, control de existencias y generación de reportes para optimizar los procesos comerciales."
+      },
+      "1": {
+        "title": "Music Social Network",
+        "description": "Red social para amantes de la música que permite compartir publicaciones, descubrir artistas, interactuar con otros usuarios y gestionar contenido musical mediante una interfaz moderna y responsiva."
       }
     }
   }

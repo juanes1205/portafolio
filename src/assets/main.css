@@ -8,3 +8,82 @@
 html {
   scroll-behavior: smooth;
 }
+
+section {
+  position: relative;
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.stack-cards {
+  display: flex;
+  flex-direction: column;
+  view-timeline-name: --stack-cards;
+}
+
+.stack-cards .card {
+  position: sticky;
+  height: 350px;
+  top: 50px;
+}
+
+.stack-cards .card .container {
+  display: flex;
+  height: 500px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform-origin: center top;
+  animation-timeline: --stack-cards;
+}
+
+.stack-cards .card:nth-child(1) {
+  --max-scale: 0.7;
+  & .container {
+    animation-range: exit-crossing 0% exit-crossing 25%;
+  }
+}
+
+.stack-cards .card:nth-child(2) {
+  --max-scale: 0.8;
+  & .container {
+    animation-range: exit-crossing 25% exit-crossing 50%;
+  }
+}
+
+.stack-cards .card:nth-child(3) {
+  --max-scale: 0.9;
+  & .container {
+    animation-range: exit-crossing 50% exit-crossing 75%;
+  }
+}
+
+.stack-cards .card:nth-child(4) {
+  --max-scale: 1;
+  & .container {
+    animation-range: exit-crossing 75% exit-crossing 100%;
+  }
+}
+
+.stack-cards .card:nth-child(5) {
+  --max-scale: 1.1;
+  & .container {
+    animation-range: exit-crossing 100% exit-crossing 125%;
+  }
+}
+
+@keyframes exit-crossing {
+  from {
+    transform: scale(var(--max-scale));
+  }
+}
+
+/* responsive */
+
+@media (max-width: 768px) {
+  .stack-cards .card {
+    height: 500px;
+  }
+}

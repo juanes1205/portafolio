@@ -60,10 +60,10 @@ const toggleTheme = () => {
           class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
         >
           <li>
-            <a>{{ t("navbar.Home") }}</a>
+            <router-link to="/">{{ t("navbar.Home") }}</router-link>
           </li>
           <li>
-            <a>{{ t("navbar.Projects") }}</a>
+            <router-link to="/projects">{{ t("navbar.Projects") }}</router-link>
           </li>
           <li>
             <a>{{ t("navbar.Contact") }}</a>
@@ -72,7 +72,7 @@ const toggleTheme = () => {
       </div>
     </div>
     <div class="navbar-center">
-      <a class="btn btn-ghost text-xl text-blue-500">Juan Esteban Restrepo Ossa</a>
+      <router-link to="/" class="btn btn-ghost text-xl text-blue-500">Juan Esteban Restrepo Ossa</router-link>
     </div>
     <div class="navbar-end">
       <!-- Toogle Theme -->

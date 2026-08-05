@@ -1,8 +1,10 @@
 <script setup>
+import { Icon } from "@iconify/vue";
 import HeroSection from "@/components/layout/HeroSection.vue";
 import StatsSection from "@/components/Stats.vue";
 import TimeLine from "@/components/TimeLine.vue";
 import Sections from "@/components/Sections.vue";
+import Projects from "@/components/Projects.vue";
 </script>
 
 <template>
@@ -32,6 +34,55 @@ import Sections from "@/components/Sections.vue";
             :description="$t('timeline.experience.2.description')"
           />
         </ol>
+      </div>
+    </Sections>
+    <!-- projects -->
+    <Sections icon="pajamas:work" title="Projects">
+      <template #title>
+        <h2>{{ $t("projects.section.title") }}</h2>
+      </template>
+
+      <section>
+        <div class="stack-cards">
+          <div class="card">
+            <div class="container">
+              <Projects
+                :title="$t('projects.proy.0.title')"
+                :description="$t('projects.proy.0.description')"
+                :technologies="['Laravel', 'PHP', 'VueJs', 'MariaDB']"
+                imgUrl="/proyectos/Sistema_CVI/01.jpg"
+                altText="Sistema_CVI"
+                url=""
+                type="web"
+                githubUrl=""
+                previewUrl=""
+              />
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="container">
+              <Projects
+                :title="$t('projects.proy.1.title')"
+                :description="$t('projects.proy.1.description')"
+               :technologies="['Laravel', 'PHP', 'VueJs', 'MariaDB']"
+                imgUrl="/proyectos/MSN/01.jpg"
+                altText="MSN"
+                url=""
+                type="web"
+                githubUrl=""
+                previewUrl=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ver mas -->
+      <div class="flex justify-center">
+        <RouterLink to="/Projects" class="btn btn-secondary rounded">
+          {{ $t("more.text") }} <Icon icon="pajamas:arrow-right" />
+        </RouterLink>
       </div>
     </Sections>
   </main>
