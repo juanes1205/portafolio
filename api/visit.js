@@ -1,17 +1,26 @@
 import crypto from "node:crypto";
 import admin from "firebase-admin";
 
-if (!admin.apps.length) {
-    admin.initializeApp({
-        credential: admin.credential.cert({
-            projectId: process.env.FIREBASE_PROJECT_ID,
-            clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
-            privateKey: process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/g, "\n"),
-        }),
-    });
-}
+let db;
 
-const db = admin.firestore();
+try {
+    if (!admin.apps) {
+        admin.initializeApp({
+            credential: admin.credential.cert({
+                projectId: process.env.FIREBASE_PROJECT_ID,
+                clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
+                privateKey: process.env.FIREBASE_PRIVATE_KEY?.replace(
+                    /\\n/g,
+                    "\n"
+                ),
+            }),
+        });
+    }
+
+    db = admin.firestore();
+} catch (error) {
+    console.error("Error inicializando Firebase Admin:", error);
+}
 
 export default async function handler(req, res) {
     if (req.method !== "POST") {
@@ -20,15 +29,21 @@ export default async function handler(req, res) {
         });
     }
 
+    if (!db) {
+        return res.status(500).json({
+            error: "Firebase Admin no está inicializado",
+        });
+    }
+
     try {
-        // Obtener IP del visitante
+        // Obtener IP
         const forwardedFor = req.headers["x-forwarded-for"];
 
         const ip = forwardedFor
             ? forwardedFor.split(",")[0].trim()
             : req.socket?.remoteAddress || "unknown";
 
-        // Crear hash de la IP
+        // Crear hash de IP
         const ipHash = crypto
             .createHash("sha256")
             .update(`${ip}-${process.env.IP_HASH_SECRET}`)
@@ -46,10 +61,7 @@ export default async function handler(req, res) {
             .collection("estadisticas")
             .doc("visitas");
 
-        // ==========================================
-        // VISITANTE NUEVO
-        // ==========================================
-
+        // Visitante nuevo
         if (!visitorSnap.exists) {
             await visitorRef.set({
                 primeraVisita: now,
@@ -79,10 +91,7 @@ export default async function handler(req, res) {
             });
         }
 
-        // ==========================================
-        // VISITANTE EXISTENTE
-        // ==========================================
-
+        // Visitante existente
         await visitorRef.update({
             ultimaVisita: now,
             visitas: admin.firestore.FieldValue.increment(1),
@@ -91,7 +100,7 @@ export default async function handler(req, res) {
         const statsSnap = await statsRef.get();
 
         const total = statsSnap.exists
-            ? statsSnap.data().total || 0
+            ? statsSnap.data()?.total || 0
             : 0;
 
         return res.status(200).json({
@@ -104,6 +113,8 @@ export default async function handler(req, res) {
 
         return res.status(500).json({
             error: "Internal server error",
+            message: error.message,
+            code: error.code || null,
         });
     }
 }
