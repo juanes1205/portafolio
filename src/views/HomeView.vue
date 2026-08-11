@@ -50,11 +50,11 @@ import Projects from "@/components/Projects.vue";
                 :title="$t('projects.proy.0.title')"
                 :description="$t('projects.proy.0.description')"
                 :technologies="['Laravel', 'PHP', 'VueJs', 'MariaDB']"
-                imgUrl="/proyectos/Sistema_CVI/01.jpg"
+                :images="['/proyectos/Sistema_CVI/01.jpg']"
                 altText="Sistema_CVI"
                 url=""
                 type="web"
-                githubUrl=""
+                githubUrl="https://github.com/juanes1205/sistema_cvi"
                 previewUrl=""
               />
             </div>
@@ -65,12 +65,12 @@ import Projects from "@/components/Projects.vue";
               <Projects
                 :title="$t('projects.proy.1.title')"
                 :description="$t('projects.proy.1.description')"
-               :technologies="['Laravel', 'PHP', 'VueJs', 'MariaDB']"
-                imgUrl="/proyectos/MSN/01.jpg"
+                :technologies="['Laravel', 'PHP', 'VueJs', 'MariaDB']"
+                :images="['/proyectos/MSN/01.jpg']"
                 altText="MSN"
                 url=""
                 type="web"
-                githubUrl=""
+                githubUrl="https://github.com/juanes1205/msn"
                 previewUrl=""
               />
             </div>

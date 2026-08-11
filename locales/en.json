@@ -4,21 +4,18 @@
     "Projects": "Projects",
     "Contact": "Contact"
   },
-
   "more": {
-    "text": "See more"
+    "text": "View more"
   },
-
   "hero": {
     "title": "Hi, I'm ",
     "available": "Available for work",
-    "description": "Systems Engineer with 9 years of experience in web development, Cloud Infrastructure, DevOps, and Cybersecurity. I build secure, scalable, and production-ready applications using JavaScript, PHP, Node.js, Vue.js, React.js, and AWS.",
+    "description": "Systems Engineer with experience in web application development, Cloud infrastructure, DevOps, and cybersecurity. I build scalable solutions using JavaScript, PHP, Node.js, Vue.js, React.js, and Cloud technologies such as AWS.",
     "actions": {
-      "contact": "Contact Me",
+      "contact": "Contact me",
       "cv": "Download CV"
     }
   },
-
   "stats": {
     "visits": "Visits",
     "since": "Since",
@@ -33,21 +30,21 @@
     },
     "experience": {
       "1": {
-        "title": "Cloud & On-Premises Infrastructure Lead",
+        "title": "Cloud and On-Premise Infrastructure Lead",
         "company": "Psicol S.A.S.",
         "date": "July 2022 - June 2026",
-        "description": "Managed Cloud and On-Premises infrastructure across AWS, VMware, and Linux environments. Implemented automation, monitoring, cybersecurity, Docker, Active Directory, and provided support for more than 50 applications across Development, QA, and Production environments.",
+        "description": "Experience working with more than 50 applications across Development, QA, and Production environments, contributing to deployments, database administration, and REST API integration. Implemented solutions using Docker, Docker Compose, Apache, Nginx, and AWS, complementing application development and operations with automation, monitoring, and cybersecurity practices.",
         "actions": {
-          "view": "View Details"
+          "view": "View details"
         }
       },
       "2": {
-        "title": "IT Infrastructure Technician",
+        "title": "IT Systems Assistant",
         "company": "Vehículos del Camino",
         "date": "November 2017 - July 2022",
-        "description": "Managed Windows and Linux servers, VMware and Hyper-V virtualization, Active Directory, corporate networking, relational databases, PowerShell automation, and infrastructure support for more than 200 users.",
+        "description": "Supported and administered enterprise platforms and databases used by more than 200 users. Automated processes using PowerShell and supported applications running on Windows and Linux servers, complemented by administration of VMware, Hyper-V, Active Directory, and corporate networks.",
         "actions": {
-          "view": "View Details"
+          "view": "View details"
         }
       }
     }
@@ -59,11 +56,11 @@
     "proy": {
       "0": {
         "title": "Inventory, Purchasing and Sales Management System (CVI)",
-        "description": "Web application designed to manage inventory, purchasing, and sales processes. It includes product, supplier, customer, and order management, inventory tracking, and reporting features to streamline business operations."
+        "description": "Web application for comprehensive inventory, purchasing, and sales management. Includes product, supplier, and customer management, order processing, inventory control, and report generation. Implements CRUD operations, business rules, and centralized data management, focusing on the automation and optimization of commercial processes."
       },
       "1": {
         "title": "Music Social Network",
-        "description": "Social networking web application for music enthusiasts, allowing users to share posts, discover artists, interact with the community, and manage music-related content through a modern and responsive interface."
+        "description": "Social network designed for music enthusiasts, developed to facilitate user interaction and music content discovery. Allows users to create and share posts, interact with others, discover artists, and manage content through a modern and responsive interface. The project includes authentication, user management, content management, and social interaction features."
       }
     }
   }

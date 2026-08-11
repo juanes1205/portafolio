@@ -9,9 +9,13 @@ import Projects from "@/components/Projects.vue";
         :title="$t('projects.proy.0.title')"
         :description="$t('projects.proy.0.description')"
         :technologies="['Laravel', 'PHP', 'VueJs', 'MariaDB']"
-        imgUrl="/proyectos/Sistema_CVI/02.jpg"
+        :images="[
+          '/proyectos/Sistema_CVI/01.jpg',
+          '/proyectos/Sistema_CVI/02.jpg',
+          '/proyectos/Sistema_CVI/03.jpg',
+        ]"
         altText="Sistema_CVI"
-        githubUrl=""
+        githubUrl="https://github.com/juanes1205/sistema_cvi"
         previewUrl=""
         type="web"
       />
@@ -19,8 +23,13 @@ import Projects from "@/components/Projects.vue";
         :title="$t('projects.proy.1.title')"
         :description="$t('projects.proy.1.description')"
         :technologies="['Laravel', 'PHP', 'VueJs', 'MariaDB']"
-        imgUrl="/proyectos/MSN/03.jpg"
+        :images="[
+          '/proyectos/MSN/01.jpg',
+          '/proyectos/MSN/02.jpg',
+          '/proyectos/MSN/03.jpg',
+        ]"
         altText="MSN"
+        githubUrl="https://github.com/juanes1205/msn"
       />
     </div>
   </div>

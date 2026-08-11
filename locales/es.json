@@ -30,10 +30,10 @@
     },
     "experience": {
       "1": {
-        "title": "Líder de Infraestructura Cloud y On-premise",
+        "title": "Líder de Infraestructura Cloud y On-Premise",
         "company": "Psicol S.A.S.",
         "date": "Julio 2022 - Junio 2026",
-        "description": "Administración de infraestructura Cloud y On-Premise sobre AWS, VMware y Linux. Implementación de automatización, monitoreo, ciberseguridad, Docker, Active Directory y soporte para más de 50 aplicaciones en entornos de Desarrollo, QA y Producción.",
+        "description": "Experiencia trabajando con más de 50 aplicaciones en ambientes de Desarrollo, QA y Producción, participando en despliegues, administración de bases de datos e integración mediante APIs REST. Implementé soluciones con Docker, Docker Compose, Apache, Nginx y AWS, complementando el desarrollo y operación de aplicaciones con automatización, monitoreo y prácticas de ciberseguridad.",
         "actions": {
           "view": "Ver detalles"
         }
@@ -42,7 +42,7 @@
         "title": "Auxiliar de Sistemas",
         "company": "Vehículos del Camino",
         "date": "Noviembre 2017 - Julio 2022",
-        "description": "Administración de servidores Windows y Linux, virtualización con VMware y Hyper-V, Active Directory, redes corporativas, bases de datos, automatización mediante PowerShell y soporte de infraestructura para más de 200 usuarios.",
+        "description": "Soporte y administración de plataformas empresariales y bases de datos utilizadas por más de 200 usuarios. Automatización de procesos mediante PowerShell y soporte a aplicaciones sobre servidores Windows y Linux, complementado con administración de VMware, Hyper-V, Active Directory y redes corporativas.",
         "actions": {
           "view": "Ver detalles"
         }
@@ -56,11 +56,11 @@
     "proy": {
       "0": {
         "title": "Sistema de Gestión de Inventario, Compras y Ventas (CVI)",
-        "description": "Aplicación web para la gestión integral de inventario, compras y ventas. Permite administrar productos, proveedores, clientes, órdenes, control de existencias y generación de reportes para optimizar los procesos comerciales."
+        "description": "Aplicación web para la gestión integral de inventario, compras y ventas. Incluye administración de productos, proveedores y clientes, gestión de órdenes, control de existencias y generación de reportes. Implementa operaciones CRUD, reglas de negocio y gestión centralizada de datos, enfocándose en la automatización y optimización de los procesos comerciales"
       },
       "1": {
         "title": "Music Social Network",
-        "description": "Red social para amantes de la música que permite compartir publicaciones, descubrir artistas, interactuar con otros usuarios y gestionar contenido musical mediante una interfaz moderna y responsiva."
+        "description": "Red social orientada a amantes de la música, desarrollada para facilitar la interacción entre usuarios y el descubrimiento de contenido musical. Permite crear y compartir publicaciones, interactuar con otros usuarios, descubrir artistas y gestionar contenido mediante una interfaz moderna y responsiva. El proyecto incorpora funcionalidades de autenticación, gestión de usuarios, contenido e interacción social."
       }
     }
   }
