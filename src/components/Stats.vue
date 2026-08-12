@@ -6,8 +6,11 @@ import { Icon } from "@iconify/vue";
 
 const visitas = ref(0);
 
-// ID del contador según el entorno
+// ID diferente para desarrollo y producción
 const contadorId = import.meta.env.VITE_VISIT_COUNTER_ID;
+
+// Tiempo durante el cual el navegador no vuelve a contar
+const INTERVALO_VISITA = 24 * 60 * 60 * 1000;
 
 onMounted(async () => {
   try {
@@ -15,22 +18,50 @@ onMounted(async () => {
       throw new Error("VITE_VISIT_COUNTER_ID no está definido");
     }
 
+    // Utilizamos un storageKey diferente para desarrollo y producción.
+    const storageKey = `portfolio_last_visit_${contadorId}`;
+
+    const ultimaVisita = localStorage.getItem(storageKey);
+
+    const ahora = Date.now();
+
+    // Determinar si debe contabilizarse una nueva visita.
+    const debeContar =
+      !ultimaVisita || ahora - Number(ultimaVisita) >= INTERVALO_VISITA;
+
     const visitasRef = doc(db, "visitas", contadorId);
 
     const docSnap = await getDoc(visitasRef);
 
-    if (docSnap.exists()) {
-      await updateDoc(visitasRef, {
-        contador: increment(1),
-      });
-
-      visitas.value = (docSnap.data().contador || 0) + 1;
-    } else {
+    // El documento todavía no existe.
+    if (!docSnap.exists()) {
       await setDoc(visitasRef, {
         contador: 1,
       });
 
       visitas.value = 1;
+
+      // Guardamos el momento de la visita
+      localStorage.setItem(storageKey, ahora.toString());
+      return;
+    }
+
+    // El documento existe.
+    const contadorActual = docSnap.data().contador || 0;
+
+    // Solo incrementamos si: 1. Es la primera visita del navegador o 2. Han pasado 24 horas.
+    if (debeContar) {
+      await updateDoc(visitasRef, {
+        contador: increment(1),
+      });
+
+      visitas.value = contadorActual + 1;
+
+      // Actualizamos la fecha de la última visita contabilizada
+      localStorage.setItem(storageKey, ahora.toString());
+    } else {
+      // El usuario ya fue contabilizado durante las últimas 24 horas.
+      visitas.value = contadorActual;
     }
   } catch (error) {
     console.error("Error actualizando visitas:", error);
