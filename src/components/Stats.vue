@@ -1,27 +1,39 @@
 <script setup>
 import { ref, onMounted } from "vue";
+import { db } from "../config/firebaseConfig";
+import { doc, getDoc, setDoc, updateDoc, increment } from "firebase/firestore";
 import { Icon } from "@iconify/vue";
 
 const visitas = ref(0);
 
+// ID del contador según el entorno
+const contadorId = import.meta.env.VITE_VISIT_COUNTER_ID;
+
 onMounted(async () => {
   try {
-    const response = await fetch("/api/visit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-
-    if (!response.ok) {
-      throw new Error("No se pudo registrar la visita");
+    if (!contadorId) {
+      throw new Error("VITE_VISIT_COUNTER_ID no está definido");
     }
 
-    const data = await response.json();
+    const visitasRef = doc(db, "visitas", contadorId);
 
-    visitas.value = data.total ?? 0;
+    const docSnap = await getDoc(visitasRef);
+
+    if (docSnap.exists()) {
+      await updateDoc(visitasRef, {
+        contador: increment(1),
+      });
+
+      visitas.value = (docSnap.data().contador || 0) + 1;
+    } else {
+      await setDoc(visitasRef, {
+        contador: 1,
+      });
+
+      visitas.value = 1;
+    }
   } catch (error) {
-    console.error("Error registrando visita:", error);
+    console.error("Error actualizando visitas:", error);
   }
 });
 </script>
