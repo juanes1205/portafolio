@@ -20,12 +20,12 @@ const toggleLanguage = () => {
 };
 
 const themeClass = computed(() => {
-  return currentTheme.value === "black" ? "black" : "wireframe";
+  return currentTheme.value === "black" ? "black" : "nord";
 });
 
 //funcion para cambiar el tema segun estado del toggle
 const toggleTheme = () => {
-  currentTheme.value = currentTheme.value === "black" ? "wireframe" : "black";
+  currentTheme.value = currentTheme.value === "black" ? "nord" : "black";
   document.documentElement.setAttribute("data-theme", currentTheme.value);
 };
 </script>
@@ -63,10 +63,19 @@ const toggleTheme = () => {
             <router-link to="/">{{ t("navbar.Home") }}</router-link>
           </li>
           <li>
-            <router-link to="/projects">{{ t("navbar.Projects") }}</router-link>
+            <router-link :to="{ path: '/', hash: '#timeline' }">{{ t("navbar.Experience") }}</router-link>
           </li>
           <li>
-            <a>{{ t("navbar.Contact") }}</a>
+            <router-link :to="{ path: '/', hash: '#skills' }">{{ t("navbar.Skills") }}</router-link>
+          </li>
+          <li>
+            <router-link to="/Projects">{{ t("navbar.Projects") }}</router-link>
+          </li>
+          <li>
+            <router-link :to="{ path: '/', hash: '#education' }">{{ t("navbar.Education") }}</router-link>
+          </li>
+          <li>
+            <router-link :to="{ path: '/', hash: '#contact' }">{{ t("navbar.Contact") }}</router-link>
           </li>
         </ul>
       </div>

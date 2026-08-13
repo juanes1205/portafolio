@@ -25,9 +25,9 @@ const { t } = useI18n();
           alt="404 Space"
           class="w-64 h-64 mx-auto rounded-full shadow-lg object-cover"
         >
-        <p class="text-2xl font-semibold mb-8">Houston, we have a problem!</p>
+        <p class="text-2xl font-semibold mb-8">{{ t("errorpage.title") }}</p>
         <p class="text-lg text-base-content/80 mb-8">
-          The page you're looking for has been lost in space
+          {{ t("errorpage.description") }}
         </p>
         <!-- Botones de acción -->
         <div class="flex gap-4 justify-center">
@@ -35,13 +35,13 @@ const { t } = useI18n();
             @click="router.push('/')" 
             class="btn btn-primary"
           >
-            Return to Earth (Home)
+            {{ t("errorpage.btn.home") }}
           </button>
           <button 
             @click="router.go(-1)" 
             class="btn btn-outline"
           >
-            Go Back
+            {{ t("errorpage.btn.back") }}
           </button>
         </div>
       </div>

@@ -2,7 +2,10 @@
   "navbar": {
     "Home": "Inicio",
     "Projects": "Proyectos",
-    "Contact": "Contacto"
+    "Contact": "Contacto",
+    "Experience": "Experiencia",
+    "Skills": "Habilidades",
+    "Education": "Educación"
   },
   "more": {
     "text": "Ver más"
@@ -53,6 +56,12 @@
     "section": {
       "title": "Proyectos"
     },
+    "filters": {
+      "all": "Todos",
+      "laravel": "Laravel",
+      "vue": "Vue.js",
+      "php": "PHP"
+    },
     "proy": {
       "0": {
         "title": "Sistema de Gestión de Inventario, Compras y Ventas (CVI)",
@@ -89,5 +98,74 @@
       "devops": "DevOps"
     },
     "social": "Social"
+  },
+  "contact": {
+    "section": {
+      "title": "Contacto"
+    },
+    "description": "Si deseas contactarme para alguna oportunidad laboral, colaboración en proyectos o simplemente saludar, puedes escribirme directamente por correo electrónico o a través de LinkedIn.",
+    "actions": {
+      "email": "Enviar Correo"
+    },
+    "form": {
+      "name": "Nombre completo",
+      "namePlaceholder": "Ingresa tu nombre",
+      "email": "Correo electrónico",
+      "emailPlaceholder": "correo{'@'}ejemplo.com",
+      "subject": "Asunto",
+      "subjectPlaceholder": "Consulta, propuesta de proyecto...",
+      "message": "Mensaje",
+      "messagePlaceholder": "Escribe tu mensaje aquí...",
+      "submit": "Enviar Mensaje",
+      "success": "¡Mensaje enviado con éxito! Me pondré en contacto contigo pronto.",
+      "error": "Hubo un error al enviar el mensaje. Por favor, intenta de nuevo."
+    }
+  },
+  "skills": {
+    "section": {
+      "title": "Habilidades"
+    },
+    "categories": {
+      "frontend": "Desarrollo Frontend",
+      "backend": "Desarrollo Backend",
+      "cloud": "Cloud & DevOps",
+      "databases": "Bases de Datos"
+    }
+  },
+  "education": {
+    "section": {
+      "title": "Educación y Certificaciones"
+    },
+    "subsections": {
+      "academic": "Formación Académica",
+      "certs": "Cursos y Certificaciones"
+    },
+    "academicList": {
+      "degree1": {
+        "title": "Ingeniería de Sistemas",
+        "institution": "Institución Universitaria de Envigado, 2025"
+      },
+      "degree2": {
+        "title": "Técnico Laboral en Análisis y Programación de Computadores",
+        "institution": "CENSA, 2018"
+      }
+    },
+    "certsList": {
+      "aws": "AWS Certified Solutions Architect Associate – Udemy (30h)",
+      "cybersec": "Introduction to Cybersecurity – Cisco",
+      "sql1": "Bases de Datos: Generalidades y SQL – SENA (40h)",
+      "sql2": "Bases de Datos: Generalidades y SQL (DDL, DML) – SENA (40h)",
+      "reactnative": "React Native (Básico y Práctico) – Platzi (38h)",
+      "javascript": "JavaScript (Básico y Práctico) – Platzi (38h)",
+      "quality": "Calidad en el Desarrollo de Software – SENA (40h)"
+    }
+  },
+  "errorpage": {
+    "title": "Houston, tenemos un problema!",
+    "description": "La página que estás buscando se ha perdido en el espacio.",
+    "btn": {
+      "home": "Regresar a la Tierra (Inicio)",
+      "back": "Regresar"
+    }
   }
 }

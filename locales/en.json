@@ -2,7 +2,10 @@
   "navbar": {
     "Home": "Home",
     "Projects": "Projects",
-    "Contact": "Contact"
+    "Contact": "Contact",
+    "Experience": "Experience",
+    "Skills": "Skills",
+    "Education": "Education"
   },
   "more": {
     "text": "View more"
@@ -53,6 +56,12 @@
     "section": {
       "title": "Projects"
     },
+    "filters": {
+      "all": "All",
+      "laravel": "Laravel",
+      "vue": "Vue.js",
+      "php": "PHP"
+    },
     "proy": {
       "0": {
         "title": "Inventory, Purchasing and Sales Management System (CVI)",
@@ -89,5 +98,74 @@
       "devops": "DevOps"
     },
     "social": "Social"
+  },
+  "contact": {
+    "section": {
+      "title": "Contact"
+    },
+    "description": "If you would like to contact me for job opportunities, project collaborations, or just to say hi, feel free to reach out via email or LinkedIn.",
+    "actions": {
+      "email": "Send Email"
+    },
+    "form": {
+      "name": "Full name",
+      "namePlaceholder": "Enter your name",
+      "email": "Email address",
+      "emailPlaceholder": "email{'@'}example.com",
+      "subject": "Subject",
+      "subjectPlaceholder": "Inquiry, project proposal...",
+      "message": "Message",
+      "messagePlaceholder": "Write your message here...",
+      "submit": "Send Message",
+      "success": "Message sent successfully! I will get in touch with you soon.",
+      "error": "There was an error sending your message. Please try again."
+    }
+  },
+  "skills": {
+    "section": {
+      "title": "Skills"
+    },
+    "categories": {
+      "frontend": "Frontend Development",
+      "backend": "Backend Development",
+      "cloud": "Cloud & DevOps",
+      "databases": "Databases"
+    }
+  },
+  "education": {
+    "section": {
+      "title": "Education & Certifications"
+    },
+    "subsections": {
+      "academic": "Academic Background",
+      "certs": "Courses & Certifications"
+    },
+    "academicList": {
+      "degree1": {
+        "title": "Systems Engineering",
+        "institution": "Envigado University Institution, 2025"
+      },
+      "degree2": {
+        "title": "Vocational Tech in Computer Analysis and Programming",
+        "institution": "CENSA, 2018"
+      }
+    },
+    "certsList": {
+      "aws": "AWS Certified Solutions Architect Associate – Udemy (30h)",
+      "cybersec": "Introduction to Cybersecurity – Cisco",
+      "sql1": "Databases: Fundamentals and SQL – SENA (40h)",
+      "sql2": "Databases: Fundamentals and SQL (DDL, DML) – SENA (40h)",
+      "reactnative": "React Native (Basic & Practical) – Platzi (38h)",
+      "javascript": "JavaScript (Basic & Practical) – Platzi (38h)",
+      "quality": "Software Development Quality – SENA (40h)"
+    }
+  },
+  "errorpage": {
+    "title": "Houston, we have a problem!",
+    "description": "The page you're looking for has been lost in space.",
+    "btn": {
+      "home": "Back to Earth (Home)",
+      "back": "Back"
+    }
   }
 }

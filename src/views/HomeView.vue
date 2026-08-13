@@ -6,6 +6,9 @@ import TimeLine from "@/components/TimeLine.vue";
 import Sections from "@/components/Sections.vue";
 import Projects from "@/components/Projects.vue";
 import About from "@/components/About.vue";
+import ContactForm from "@/components/ContactForm.vue";
+import Skills from "@/components/Skills.vue";
+import Certifications from "@/components/Certifications.vue";
 </script>
 
 <template>
@@ -16,7 +19,7 @@ import About from "@/components/About.vue";
     <StatsSection />
     <!-- sections -->
     <!-- timeline -->
-    <Sections icon="pajamas:work" title="Timeline">
+    <Sections id="timeline" icon="pajamas:work" title="Timeline">
       <template #title>
         <h2>{{ $t("timeline.section.title") }}</h2>
       </template>
@@ -38,7 +41,7 @@ import About from "@/components/About.vue";
       </div>
     </Sections>
     <!-- projects -->
-    <Sections icon="pajamas:work" title="Projects">
+    <Sections id="projects" icon="pajamas:work" title="Projects">
       <template #title>
         <h2>{{ $t("projects.section.title") }}</h2>
       </template>
@@ -85,14 +88,38 @@ import About from "@/components/About.vue";
           {{ $t("more.text") }} <Icon icon="pajamas:arrow-right" />
         </RouterLink>
       </div>
+    </Sections>
 
-      <!-- About me -->
-      <Sections icon="heroicons:user-circle-solid" title="About me">
-        <template #title>
-          <h2>{{ $t("about.section.title") }}</h2>
-        </template>
-        <About />
-      </Sections>
+    <!-- Habilidades -->
+    <Sections id="skills" icon="mdi:tools" title="Habilidades">
+      <template #title>
+        <h2>{{ $t("skills.section.title") }}</h2>
+      </template>
+      <Skills />
+    </Sections>
+    
+    <!-- About me -->
+    <Sections id="about" icon="heroicons:user-circle-solid" title="About me">
+      <template #title>
+        <h2>{{ $t("about.section.title") }}</h2>
+      </template>
+      <About />
+    </Sections>
+
+    <!-- Educación y Certificaciones -->
+    <Sections id="education" icon="mdi:school" title="Educación y Certificaciones">
+      <template #title>
+        <h2>{{ $t("education.section.title") }}</h2>
+      </template>
+      <Certifications />
+    </Sections>
+
+    <!-- Contact me -->
+    <Sections id="contact" icon="heroicons:chat-bubble-left-right-solid" title="Contact">
+      <template #title>
+        <h2>{{ $t("contact.section.title") }}</h2>
+      </template>
+      <ContactForm />
     </Sections>
   </main>
 </template>
