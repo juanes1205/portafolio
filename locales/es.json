@@ -63,5 +63,31 @@
         "description": "Red social orientada a amantes de la música, desarrollada para facilitar la interacción entre usuarios y el descubrimiento de contenido musical. Permite crear y compartir publicaciones, interactuar con otros usuarios, descubrir artistas y gestionar contenido mediante una interfaz moderna y responsiva. El proyecto incorpora funcionalidades de autenticación, gestión de usuarios, contenido e interacción social."
       }
     }
+  },
+  "about": {
+    "section": {
+      "title": "Sobre mí"
+    },
+    "me": {
+      "1": {
+        "p1": "¡Hola! Soy Juan Esteban Restrepo Ossa",
+        "p2": "Soy Ingeniero de Sistemas y profesional de tecnología con experiencia en desarrollo de software, infraestructura Cloud y ciberseguridad. Durante mi trayectoria he trabajado en la administración y evolución de plataformas tecnológicas, participando en proyectos que involucran tanto el desarrollo como la operación de aplicaciones.",
+        "p3": "Mi experiencia profesional me ha permitido trabajar durante 9 años en entornos Cloud y On-Premise, principalmente con tecnologías como AWS, Linux, Windows, VMware, Docker y automatización, mientras he fortalecido mi perfil como desarrollador utilizando JavaScript, PHP, Node.js, Vue.js, React y APIs REST.",
+        "p4": "Actualmente estoy enfocado en seguir creciendo en el desarrollo de software, creando aplicaciones web y soluciones que combinen buenas prácticas de programación, integración de servicios, bases de datos y tecnologías Cloud.",
+        "p5": "Algo que considero una fortaleza de mi perfil es poder entender una aplicación desde el código hasta la infraestructura donde se ejecuta. Esta visión me permite desarrollar soluciones teniendo en cuenta aspectos como rendimiento, seguridad, disponibilidad, despliegue y escalabilidad.",
+        "p6": "Mi objetivo es continuar creciendo como desarrollador de software, aprovechando mi experiencia en infraestructura, Cloud y DevOps para construir soluciones tecnológicas útiles, seguras y escalables."
+      }
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 JERO. Hecho con ❤️ Casi todos los derechos reservados",
+    "title": "Juan Esteban Restrepo Ossa",
+    "role": "Ingeniero de Sistemas",
+    "skill": {
+      "web": "Desarrollo Web",
+      "cloud": "Cloud",
+      "devops": "DevOps"
+    },
+    "social": "Social"
   }
 }

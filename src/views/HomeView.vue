@@ -5,6 +5,7 @@ import StatsSection from "@/components/Stats.vue";
 import TimeLine from "@/components/TimeLine.vue";
 import Sections from "@/components/Sections.vue";
 import Projects from "@/components/Projects.vue";
+import About from "@/components/About.vue";
 </script>
 
 <template>
@@ -84,6 +85,14 @@ import Projects from "@/components/Projects.vue";
           {{ $t("more.text") }} <Icon icon="pajamas:arrow-right" />
         </RouterLink>
       </div>
+
+      <!-- About me -->
+      <Sections icon="heroicons:user-circle-solid" title="About me">
+        <template #title>
+          <h2>{{ $t("about.section.title") }}</h2>
+        </template>
+        <About />
+      </Sections>
     </Sections>
   </main>
 </template>

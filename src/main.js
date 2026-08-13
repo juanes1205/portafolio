@@ -13,6 +13,8 @@ import es from '../locales/es.json'
 import { firebaseApp } from './config/firebaseConfig'
 import { VueFire, VueFireAuth } from 'vuefire'
 
+//marquee
+import Marquee from 'vue3-marquee'
 
 const i18n = createI18n({
   legacy: false,
@@ -31,4 +33,6 @@ app.use(i18n)
 app.use(VueFire, {
   firebaseApp,
 })
+//marquee
+app.use(Marquee)
 app.mount('#app')

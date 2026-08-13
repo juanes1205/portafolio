@@ -16,6 +16,7 @@
     "vue": "^3.5.40",
     "vue-i18n": "^11.4.7",
     "vue-router": "^5.2.0",
+    "vue3-marquee": "^4.2.2",
     "vuefire": "^3.2.3"
   },
   "devDependencies": {
