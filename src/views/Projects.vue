@@ -37,6 +37,36 @@ const projectsList = [
     previewUrl: "",
     type: "web",
   },
+  {
+    titleKey: "projects.proy.2.title",
+    descriptionKey: "projects.proy.2.description",
+    technologies: ["PHP", "MariaDB"],
+    images: [
+      "/proyectos/AD_Ventas/01.png",
+      "/proyectos/AD_Ventas/02.png",
+      "/proyectos/AD_Ventas/03.png",
+      "/proyectos/AD_Ventas/04.png",
+    ],
+    altText: "ADVentas",
+    githubUrl: "",
+    previewUrl: "",
+    type: "web",
+  },
+  {
+    titleKey: "projects.proy.3.title",
+    descriptionKey: "projects.proy.3.description",
+    technologies: ["NodeJs","Express", "React Native","SQLite"],
+    images: [
+      "/proyectos/Pokemon/01.jpg",
+      "/proyectos/Pokemon/02.jpg",
+      "/proyectos/Pokemon/03.jpg",
+      "/proyectos/Pokemon/04.jpg",
+    ],
+    altText: "Pokemon",
+    githubUrl: "https://github.com/juanes1205/pokemon_react_native",
+    previewUrl: "",
+    type: "web",
+  },
 ];
 
 const filters = [
@@ -44,6 +74,10 @@ const filters = [
   { key: "Laravel", label: "Laravel" },
   { key: "VueJs", label: "Vue.js" },
   { key: "PHP", label: "PHP" },
+  { key: "Node.js", label: "Node.js" },
+  { key: "Express", label: "Express" },
+  { key: "React Native", label: "React Native" },
+  { key: "SQLite", label: "SQLite" },
 ];
 
 const filteredProjects = computed(() => {
@@ -51,7 +85,7 @@ const filteredProjects = computed(() => {
     return projectsList;
   }
   return projectsList.filter((project) =>
-    project.technologies.includes(selectedFilter.value)
+    project.technologies.includes(selectedFilter.value),
   );
 });
 </script>
@@ -60,14 +94,18 @@ const filteredProjects = computed(() => {
   <div class="container mx-auto px-4 py-8 mt-12 min-h-screen">
     <!-- Header -->
     <div class="text-center mb-12">
-      <h1 class="text-5xl font-extrabold text-blue-500 tracking-tight mb-4 flex items-center justify-center gap-2">
+      <h1
+        class="text-5xl font-extrabold text-blue-500 tracking-tight mb-4 flex items-center justify-center gap-2"
+      >
         <Icon icon="pajamas:work" class="w-10 h-10" />
         {{ t("projects.section.title") }}
       </h1>
       <p class="text-lg text-base-content/70 max-w-2xl mx-auto">
-        {{ locale === 'es' 
-            ? 'Una muestra detallada de mis desarrollos recientes, combinando frontend moderno, backend robusto y base de datos.' 
-            : 'A detailed showcase of my recent developments, combining modern frontend, robust backend, and databases.' }}
+        {{
+          locale === "es"
+            ? "Una muestra detallada de mis desarrollos recientes, combinando frontend moderno, backend robusto y base de datos."
+            : "A detailed showcase of my recent developments, combining modern frontend, robust backend, and databases."
+        }}
       </p>
     </div>
 
@@ -81,7 +119,7 @@ const filteredProjects = computed(() => {
           'btn rounded-lg font-bold px-6 shadow-sm transition-all duration-300 hover:scale-105',
           selectedFilter === filter.key
             ? 'btn-primary text-primary-content shadow-lg shadow-primary/20'
-            : 'btn-ghost border border-base-300'
+            : 'btn-ghost border border-base-300',
         ]"
       >
         {{ filter.labelKey ? t(filter.labelKey) : filter.label }}
@@ -111,12 +149,19 @@ const filteredProjects = computed(() => {
         />
       </div>
     </TransitionGroup>
-    
+
     <!-- No Projects Found -->
     <div v-if="filteredProjects.length === 0" class="text-center py-16">
-      <Icon icon="mdi:folder-open-outline" class="w-16 h-16 mx-auto text-base-content/40 mb-4" />
+      <Icon
+        icon="mdi:folder-open-outline"
+        class="w-16 h-16 mx-auto text-base-content/40 mb-4"
+      />
       <p class="text-xl text-base-content/50">
-        {{ locale === 'es' ? 'No se encontraron proyectos con esta tecnología.' : 'No projects found with this technology.' }}
+        {{
+          locale === "es"
+            ? "No se encontraron proyectos con esta tecnología."
+            : "No projects found with this technology."
+        }}
       </p>
     </div>
   </div>

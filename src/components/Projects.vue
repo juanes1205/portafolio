@@ -1,6 +1,5 @@
-```vue
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted, onUnmounted } from "vue";
 import { Icon } from "@iconify/vue";
 
 const props = defineProps({
@@ -38,20 +37,18 @@ const props = defineProps({
   },
 });
 
-// Índice de la imagen actual
+// Índice de la imagen actual (carrusel de la tarjeta)
 const currentImage = ref(0);
 
 // Imagen siguiente
 const nextImage = () => {
   if (props.images.length === 0) return;
-
   currentImage.value = (currentImage.value + 1) % props.images.length;
 };
 
 // Imagen anterior
 const previousImage = () => {
   if (props.images.length === 0) return;
-
   currentImage.value =
     (currentImage.value - 1 + props.images.length) % props.images.length;
 };
@@ -60,6 +57,44 @@ const previousImage = () => {
 const selectImage = (index) => {
   currentImage.value = index;
 };
+
+// ── Modal lightbox ──────────────────────────────────────────────
+const isModalOpen = ref(false);
+const modalImage = ref(0);
+
+const openModal = (index) => {
+  modalImage.value = index;
+  isModalOpen.value = true;
+  document.body.style.overflow = "hidden";
+};
+
+const closeModal = () => {
+  isModalOpen.value = false;
+  document.body.style.overflow = "";
+};
+
+const nextModalImage = () => {
+  modalImage.value = (modalImage.value + 1) % props.images.length;
+};
+
+const prevModalImage = () => {
+  modalImage.value =
+    (modalImage.value - 1 + props.images.length) % props.images.length;
+};
+
+const selectModalImage = (index) => {
+  modalImage.value = index;
+};
+
+const onKeydown = (e) => {
+  if (!isModalOpen.value) return;
+  if (e.key === "Escape") closeModal();
+  if (e.key === "ArrowRight") nextModalImage();
+  if (e.key === "ArrowLeft") prevModalImage();
+};
+
+onMounted(() => window.addEventListener("keydown", onKeydown));
+onUnmounted(() => window.removeEventListener("keydown", onKeydown));
 
 // Mapa de tecnologías con iconos
 const techIcons = {
@@ -82,6 +117,7 @@ const techIcons = {
   Daisy: "logos:daisyui",
   Hosting: "vscode-icons:file-type-light-firebasehosting",
   React: "logos:react",
+  "React Native": "devicon:reactnative",
   Next: "ri:nextjs-fill",
   ShadcnUI: "simple-icons:shadcnui",
   Figma: "logos:figma",
@@ -100,6 +136,9 @@ const techIcons = {
   Facebook: "logos:facebook",
   Supabase: "mdi:database",
   Appstore: "mdi:apple",
+  SQLite: "logos:sqlite",
+  Express: "logos:express",
+  NodeJs: "logos:nodejs",
 };
 </script>
 
@@ -111,20 +150,30 @@ const techIcons = {
     >
       <!-- CARRUSEL DE IMÁGENES -->
       <div class="w-full md:w-1/2 flex-shrink-0">
-        <div class="relative w-full overflow-hidden rounded-lg">
-          <!-- Imagen principal -->
+        <div class="relative w-full overflow-hidden rounded-lg h-70 group">
+          <!-- Imagen principal (clickeable) -->
           <img
             v-if="images.length"
             :src="images[currentImage]"
             :alt="`${altText} - imagen ${currentImage + 1}`"
-            class="rounded-lg w-full h-full object-cover transition-transform duration-300 ease-in-out"
+            class="rounded-lg w-full h-full object-cover transition-transform duration-300 ease-in-out cursor-zoom-in group-hover:scale-105"
+            @click="openModal(currentImage)"
           />
+
+          <!-- Hint de zoom -->
+          <div
+            class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+          >
+            <span class="bg-black/60 text-white text-xs px-3 py-1 rounded-full backdrop-blur-sm flex items-center gap-1">
+              <Icon icon="mdi:magnify-plus-outline" class="w-4 h-4" />
+            </span>
+          </div>
 
           <!-- Botón anterior -->
           <button
             v-if="images.length > 1"
             type="button"
-            @click="previousImage"
+            @click.stop="previousImage"
             class="absolute left-3 top-1/2 -translate-y-1/2 btn btn-circle btn-sm bg-black/50 border-none text-white hover:bg-black/70"
             aria-label="Imagen anterior"
           >
@@ -135,7 +184,7 @@ const techIcons = {
           <button
             v-if="images.length > 1"
             type="button"
-            @click="nextImage"
+            @click.stop="nextImage"
             class="absolute right-3 top-1/2 -translate-y-1/2 btn btn-circle btn-sm bg-black/50 border-none text-white hover:bg-black/70"
             aria-label="Imagen siguiente"
           >
@@ -151,7 +200,7 @@ const techIcons = {
               v-for="(_, index) in images"
               :key="index"
               type="button"
-              @click="selectImage(index)"
+              @click.stop="selectImage(index)"
               :class="[
                 'h-2 rounded-full transition-all duration-300',
                 currentImage === index
@@ -163,6 +212,75 @@ const techIcons = {
           </div>
         </div>
       </div>
+
+      <!-- MODAL LIGHTBOX -->
+      <Teleport to="body">
+        <Transition name="lb-fade">
+          <div
+            v-if="isModalOpen"
+            class="lb-overlay"
+            @click.self="closeModal"
+            role="dialog"
+            aria-modal="true"
+            :aria-label="`${altText} - galería`"
+          >
+            <!-- Contenedor de la imagen -->
+            <div class="lb-box">
+              <!-- Botón cerrar -->
+              <button
+                type="button"
+                @click="closeModal"
+                class="lb-close-btn"
+                aria-label="Cerrar"
+              >
+                <Icon icon="mdi:close" class="w-5 h-5" />
+              </button>
+
+              <!-- Contador -->
+              <span class="lb-counter">{{ modalImage + 1 }} / {{ images.length }}</span>
+
+              <!-- Imagen activa -->
+              <img
+                :src="images[modalImage]"
+                :alt="`${altText} - imagen ${modalImage + 1}`"
+                class="lb-img"
+              />
+
+              <!-- Navegación -->
+              <button
+                v-if="images.length > 1"
+                type="button"
+                @click="prevModalImage"
+                class="lb-nav lb-nav-left"
+                aria-label="Imagen anterior"
+              >
+                <Icon icon="mdi:chevron-left" class="w-8 h-8" />
+              </button>
+              <button
+                v-if="images.length > 1"
+                type="button"
+                @click="nextModalImage"
+                class="lb-nav lb-nav-right"
+                aria-label="Imagen siguiente"
+              >
+                <Icon icon="mdi:chevron-right" class="w-8 h-8" />
+              </button>
+
+              <!-- Miniaturas -->
+              <div v-if="images.length > 1" class="lb-thumbs">
+                <img
+                  v-for="(img, i) in images"
+                  :key="i"
+                  :src="img"
+                  :alt="`${altText} miniatura ${i + 1}`"
+                  @click="selectModalImage(i)"
+                  :class="['lb-thumb', modalImage === i ? 'lb-thumb-active' : '']"
+                />
+              </div>
+            </div>
+          </div>
+        </Transition>
+      </Teleport>
 
       <!-- CONTENIDO -->
       <div class="w-full md:w-1/2 flex flex-col gap-4">
@@ -227,3 +345,127 @@ const techIcons = {
     </div>
   </div>
 </template>
+
+<style>
+/* ── Overlay ────────────────────────────────── */
+.lb-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* ── Caja del lightbox ──────────────────────── */
+.lb-box {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 2.5rem;
+}
+
+/* ── Imagen principal ───────────────────────── */
+.lb-img {
+  max-width: 85vw;
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: 0.75rem;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+  user-select: none;
+  display: block;
+}
+
+/* ── Botón cerrar ───────────────────────────── */
+.lb-close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  border-radius: 9999px;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.lb-close-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* ── Contador ───────────────────────────────── */
+.lb-counter {
+  position: absolute;
+  top: 0.2rem;
+  left: 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* ── Botones de navegación ──────────────────── */
+.lb-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  border-radius: 9999px;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+.lb-nav:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-50%) scale(1.1);
+}
+.lb-nav-left  { left:  -3.5rem; }
+.lb-nav-right { right: -3.5rem; }
+
+/* ── Miniaturas ─────────────────────────────── */
+.lb-thumbs {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.lb-thumb {
+  width: 64px;
+  height: 44px;
+  object-fit: cover;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  border: 2px solid transparent;
+  opacity: 0.6;
+  transition: opacity 0.2s, border-color 0.2s;
+}
+.lb-thumb:hover  { opacity: 0.9; }
+.lb-thumb-active { opacity: 1; border-color: oklch(var(--p)); }
+
+/* ── Transición del lightbox ────────────────── */
+.lb-fade-enter-active,
+.lb-fade-leave-active {
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.lb-fade-enter-from,
+.lb-fade-leave-to {
+  opacity: 0;
+  transform: scale(0.97);
+}
+</style>

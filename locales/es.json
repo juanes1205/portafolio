@@ -70,6 +70,14 @@
       "1": {
         "title": "Music Social Network",
         "description": "Red social orientada a amantes de la música, desarrollada para facilitar la interacción entre usuarios y el descubrimiento de contenido musical. Permite crear y compartir publicaciones, interactuar con otros usuarios, descubrir artistas y gestionar contenido mediante una interfaz moderna y responsiva. El proyecto incorpora funcionalidades de autenticación, gestión de usuarios, contenido e interacción social."
+      },
+      "2": {
+        "title": "Aplicación de Administración de Ventas",
+        "description": "Aplicación web para la gestión integral de inventario, compras y ventas. Incluye administración de productos, proveedores y clientes, gestión de órdenes, control de existencias y generación de reportes. Implementa operaciones CRUD, reglas de negocio y gestión centralizada de datos, enfocándose en la automatización y optimización de los procesos comerciales"
+      },
+      "3": {
+        "title": "Consumo de API Pokémon",
+        "description": "Aplicación móvil desarrollada con React Native como ejercicio de integración con APIs REST. Utiliza la PokeAPI para realizar solicitudes HTTP, procesar datos JSON y mostrar dinámicamente información de diferentes Pokémon en la interfaz."
       }
     }
   },

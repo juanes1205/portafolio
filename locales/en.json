@@ -70,24 +70,32 @@
       "1": {
         "title": "Music Social Network",
         "description": "Social network designed for music enthusiasts, developed to facilitate user interaction and music content discovery. Allows users to create and share posts, interact with others, discover artists, and manage content through a modern and responsive interface. The project includes authentication, user management, content management, and social interaction features."
+      },
+      "2": {
+        "title": "Sales Administration Application",
+        "description": "Web application for comprehensive inventory, purchasing, and sales management. Includes product, supplier, and customer management, order processing, inventory control, and report generation. Implements CRUD operations, business rules, and centralized data management, focusing on the automation and optimization of commercial processes."
+      },
+      "3": {
+        "title": "Pokémon API Integration",
+        "description": "Mobile application developed with React Native as an exercise in REST API integration. It uses the PokéAPI to make HTTP requests, process JSON data, and dynamically display information about different Pokémon in the application interface."
       }
     }
   },
   "about": {
-  "section": {
-    "title": "About Me"
-  },
-  "me": {
-    "1": {
-      "p1": "Hi! I'm Juan Esteban Restrepo Ossa",
-      "p2": "I am a Systems Engineer and technology professional with experience in software development, Cloud infrastructure, and cybersecurity. Throughout my career, I have worked on the administration and evolution of technology platforms, participating in projects involving both software development and application operations.",
-      "p3": "My professional experience has allowed me to work for 9 years in Cloud and On-Premise environments, mainly with technologies such as AWS, Linux, Windows, VMware, Docker, and automation, while strengthening my development skills using JavaScript, PHP, Node.js, Vue.js, React, and REST APIs.",
-      "p4": "I am currently focused on continuing to grow in software development, creating web applications and solutions that combine programming best practices, service integration, databases, and Cloud technologies.",
-      "p5": "One of the strengths of my profile is my ability to understand an application from the code to the infrastructure where it runs. This perspective allows me to develop solutions while considering aspects such as performance, security, availability, deployment, and scalability.",
-      "p6": "My goal is to continue growing as a software developer, leveraging my experience in infrastructure, Cloud, and DevOps to build useful, secure, and scalable technology solutions."
+    "section": {
+      "title": "About Me"
+    },
+    "me": {
+      "1": {
+        "p1": "Hi! I'm Juan Esteban Restrepo Ossa",
+        "p2": "I am a Systems Engineer and technology professional with experience in software development, Cloud infrastructure, and cybersecurity. Throughout my career, I have worked on the administration and evolution of technology platforms, participating in projects involving both software development and application operations.",
+        "p3": "My professional experience has allowed me to work for 9 years in Cloud and On-Premise environments, mainly with technologies such as AWS, Linux, Windows, VMware, Docker, and automation, while strengthening my development skills using JavaScript, PHP, Node.js, Vue.js, React, and REST APIs.",
+        "p4": "I am currently focused on continuing to grow in software development, creating web applications and solutions that combine programming best practices, service integration, databases, and Cloud technologies.",
+        "p5": "One of the strengths of my profile is my ability to understand an application from the code to the infrastructure where it runs. This perspective allows me to develop solutions while considering aspects such as performance, security, availability, deployment, and scalability.",
+        "p6": "My goal is to continue growing as a software developer, leveraging my experience in infrastructure, Cloud, and DevOps to build useful, secure, and scalable technology solutions."
+      }
     }
-  }
-},
+  },
   "footer": {
     "copyright": "© 2026 JERO. Made with ❤️. All rights reserved",
     "title": "Juan Esteban Restrepo Ossa",

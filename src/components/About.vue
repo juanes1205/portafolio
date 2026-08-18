@@ -97,7 +97,7 @@ const technologies = [
 
       <div class="md:w-1/2">
         <img
-          src="/imgs/me2.jpg"
+          src="/imgs/me2.png"
           alt="about"
           class="rounded-lg shadow-2xl w-full transition-all duration-300 hover:scale-105"
           width="384"
