@@ -13,10 +13,11 @@
   "hero": {
     "title": "Hola, soy ",
     "available": "Disponible para trabajar",
-    "description": "Ingeniero de Sistemas con experiencia en desarrollo de aplicaciones web, infraestructura Cloud, DevOps y ciberseguridad. Desarrollo soluciones escalables utilizando JavaScript, PHP, Node.js, Vue.js, React.js y tecnologías Cloud como AWS.",
+    "description": "Ingeniero de Sistemas apasionado por construir soluciones tecnológicas que van del código a la infraestructura. Especializado en desarrollo web con JavaScript, Vue.js, Node.js y PHP, con sólida experiencia en Cloud (AWS), DevOps y ciberseguridad. Convierto ideas en productos reales, escalables y seguros.",
     "actions": {
       "contact": "Contáctame",
-      "cv": "Descargar CV"
+      "cv": "Descargar CV",
+      "linkedin": "LinkedIn"
     }
   },
   "stats": {
@@ -56,6 +57,8 @@
     "section": {
       "title": "Proyectos"
     },
+    "subtitle": "Una muestra detallada de mis desarrollos recientes, combinando frontend moderno, backend robusto y base de datos.",
+    "empty": "No se encontraron proyectos con esta tecnología.",
     "filters": {
       "all": "Todos",
       "laravel": "Laravel",
@@ -73,7 +76,7 @@
       },
       "2": {
         "title": "Aplicación de Administración de Ventas",
-        "description": "Aplicación web para la gestión integral de inventario, compras y ventas. Incluye administración de productos, proveedores y clientes, gestión de órdenes, control de existencias y generación de reportes. Implementa operaciones CRUD, reglas de negocio y gestión centralizada de datos, enfocándose en la automatización y optimización de los procesos comerciales"
+        "description": "Aplicación web enfocada en la gestión del ciclo de ventas: registro de clientes, seguimiento de pedidos, facturación y análisis de indicadores comerciales. Desarrollada con una arquitectura limpia y modular que facilita la escalabilidad y el mantenimiento. Orientada a optimizar la operación del equipo de ventas mediante automatización de procesos y reportes en tiempo real."
       },
       "3": {
         "title": "Consumo de API Pokémon",
@@ -85,19 +88,33 @@
     "section": {
       "title": "Sobre mí"
     },
+    "highlights": {
+      "dev": {
+        "title": "Desarrollo Web",
+        "desc": "Vue.js, React, PHP, Laravel, Node.js y APIs REST. Aplicaciones full-stack de principio a fin."
+      },
+      "cloud": {
+        "title": "Cloud e Infraestructura",
+        "desc": "+9 años operando con AWS, Docker, Linux, Nginx, VMware y Hyper-V."
+      },
+      "security": {
+        "title": "DevOps y Seguridad",
+        "desc": "Automatización, monitoreo, prácticas CI/CD y ciberseguridad aplicadas desde el inicio."
+      }
+    },
     "me": {
       "1": {
         "p1": "¡Hola! Soy Juan Esteban Restrepo Ossa",
-        "p2": "Soy Ingeniero de Sistemas y profesional de tecnología con experiencia en desarrollo de software, infraestructura Cloud y ciberseguridad. Durante mi trayectoria he trabajado en la administración y evolución de plataformas tecnológicas, participando en proyectos que involucran tanto el desarrollo como la operación de aplicaciones.",
-        "p3": "Mi experiencia profesional me ha permitido trabajar durante 9 años en entornos Cloud y On-Premise, principalmente con tecnologías como AWS, Linux, Windows, VMware, Docker y automatización, mientras he fortalecido mi perfil como desarrollador utilizando JavaScript, PHP, Node.js, Vue.js, React y APIs REST.",
-        "p4": "Actualmente estoy enfocado en seguir creciendo en el desarrollo de software, creando aplicaciones web y soluciones que combinen buenas prácticas de programación, integración de servicios, bases de datos y tecnologías Cloud.",
-        "p5": "Algo que considero una fortaleza de mi perfil es poder entender una aplicación desde el código hasta la infraestructura donde se ejecuta. Esta visión me permite desarrollar soluciones teniendo en cuenta aspectos como rendimiento, seguridad, disponibilidad, despliegue y escalabilidad.",
-        "p6": "Mi objetivo es continuar creciendo como desarrollador de software, aprovechando mi experiencia en infraestructura, Cloud y DevOps para construir soluciones tecnológicas útiles, seguras y escalables."
+        "p2": "Soy Ingeniero de Sistemas con experiencia en desarrollo de software, infraestructura Cloud y ciberseguridad. A lo largo de mi carrera he trabajado en la administración, evolución y operación de plataformas tecnológicas, participando en proyectos que van desde la escritura del código hasta su despliegue en producción.",
+        "p3": "Durante más de 9 años he operado en entornos Cloud y On-Premise con tecnologías como AWS, Linux, Windows, VMware y Docker, y he construido aplicaciones utilizando JavaScript, PHP, Node.js, Vue.js, React y APIs REST. Esta combinación de perfiles me permite tener una visión completa del ciclo de vida del software.",
+        "p4": "Considero que mi mayor fortaleza es entender una aplicación desde el código hasta la infraestructura donde corre: eso me permite diseñar soluciones pensando en rendimiento, seguridad, disponibilidad, despliegue y escalabilidad desde el principio, no como un paso final.",
+        "p5": "Hoy estoy enfocado en crecer como desarrollador de software, creando productos y soluciones que combinen buenas prácticas de programación, integración de servicios, bases de datos y tecnologías Cloud — y que resuelvan problemas reales.",
+        "p6": "Si buscas a alguien que entienda tanto el negocio como la tecnología, que pueda colaborar desde la arquitectura hasta la entrega, y que disfrute construir cosas que funcionen de verdad, ¡hablemos!"
       }
     }
   },
   "footer": {
-    "copyright": "© 2026 JERO. Hecho con ❤️ Casi todos los derechos reservados",
+    "copyright": "© 2026 JERO. Hecho con ❤️ — Todos los derechos reservados",
     "title": "Juan Esteban Restrepo Ossa",
     "role": "Ingeniero de Sistemas",
     "skill": {
@@ -105,13 +122,23 @@
       "cloud": "Cloud",
       "devops": "DevOps"
     },
-    "social": "Social"
+    "made": "Hecho con ❤️ usando Vue.js · Vite · Firebase",
+    "social": "Social",
+    "nav": {
+      "title": "Navegación",
+      "home": "Inicio",
+      "experience": "Experiencia",
+      "projects": "Proyectos",
+      "skills": "Habilidades",
+      "education": "Educación",
+      "contact": "Contacto"
+    }
   },
   "contact": {
     "section": {
       "title": "Contacto"
     },
-    "description": "Si deseas contactarme para alguna oportunidad laboral, colaboración en proyectos o simplemente saludar, puedes escribirme directamente por correo electrónico o a través de LinkedIn.",
+    "description": "¿Tienes un proyecto en mente, una oportunidad laboral o simplemente quieres conectar? Estoy abierto a nuevas conversaciones. Escríbeme por correo o a través de LinkedIn y te respondo a la brevedad.",
     "actions": {
       "email": "Enviar Correo"
     },
@@ -138,6 +165,11 @@
       "backend": "Desarrollo Backend",
       "cloud": "Cloud & DevOps",
       "databases": "Bases de Datos"
+    },
+    "levels": {
+      "advanced": "Avanzado",
+      "intermediate": "Intermedio",
+      "basic": "Básico"
     }
   },
   "education": {
@@ -159,12 +191,11 @@
       }
     },
     "certsList": {
+      "javascript": "JavaScript (Básico y Práctico) – Platzi (38h)",
       "aws": "AWS Certified Solutions Architect Associate – Udemy (30h)",
       "cybersec": "Introduction to Cybersecurity – Cisco",
-      "sql1": "Bases de Datos: Generalidades y SQL – SENA (40h)",
-      "sql2": "Bases de Datos: Generalidades y SQL (DDL, DML) – SENA (40h)",
+      "sql": "Bases de Datos: Lenguaje SQL Avanzado (DDL y DML) – SENA (40h)",
       "reactnative": "React Native (Básico y Práctico) – Platzi (38h)",
-      "javascript": "JavaScript (Básico y Práctico) – Platzi (38h)",
       "quality": "Calidad en el Desarrollo de Software – SENA (40h)"
     }
   },

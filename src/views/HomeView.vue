@@ -30,12 +30,16 @@ import Certifications from "@/components/Certifications.vue";
             :company="$t('timeline.experience.1.company')"
             :date="$t('timeline.experience.1.date')"
             :description="$t('timeline.experience.1.description')"
+            :current="true"
+            :tags="['JavaScript','HTML','CSS','Vue.js', 'PHP', 'Laravel','AWS', 'Docker', 'Linux', 'Nginx' , 'DevOps']"
           />
           <TimeLine
             :title="$t('timeline.experience.2.title')"
             :company="$t('timeline.experience.2.company')"
             :date="$t('timeline.experience.2.date')"
             :description="$t('timeline.experience.2.description')"
+            :current="false"
+            :tags="['PowerShell', 'VMware', 'Hyper-V', 'Active Directory', 'Windows Server', 'Linux']"
           />
         </ol>
       </div>

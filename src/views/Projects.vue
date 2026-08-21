@@ -4,7 +4,7 @@ import { useI18n } from "vue-i18n";
 import Projects from "@/components/Projects.vue";
 import { Icon } from "@iconify/vue";
 
-const { t, locale } = useI18n();
+const { t } = useI18n();
 
 const selectedFilter = ref("all");
 
@@ -101,11 +101,7 @@ const filteredProjects = computed(() => {
         {{ t("projects.section.title") }}
       </h1>
       <p class="text-lg text-base-content/70 max-w-2xl mx-auto">
-        {{
-          locale === "es"
-            ? "Una muestra detallada de mis desarrollos recientes, combinando frontend moderno, backend robusto y base de datos."
-            : "A detailed showcase of my recent developments, combining modern frontend, robust backend, and databases."
-        }}
+        {{ t("projects.subtitle") }}
       </p>
     </div>
 
@@ -157,11 +153,7 @@ const filteredProjects = computed(() => {
         class="w-16 h-16 mx-auto text-base-content/40 mb-4"
       />
       <p class="text-xl text-base-content/50">
-        {{
-          locale === "es"
-            ? "No se encontraron proyectos con esta tecnología."
-            : "No projects found with this technology."
-        }}
+        {{ t("projects.empty") }}
       </p>
     </div>
   </div>

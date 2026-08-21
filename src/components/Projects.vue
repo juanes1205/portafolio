@@ -128,7 +128,7 @@ const techIcons = {
   MongoDb: "logos:mongodb",
   Xampp: "logos:xampp",
   Apache: "logos:apache",
-  Mysql: "logos:myqsl",
+  Mysql: "logos:mysql",
   MariaDB: "logos:mariadb",
   Spark: "logos:apache-spark",
   Meta: "logos:meta-icon",
@@ -138,7 +138,6 @@ const techIcons = {
   Appstore: "mdi:apple",
   SQLite: "logos:sqlite",
   Express: "logos:express",
-  NodeJs: "logos:nodejs",
 };
 </script>
 

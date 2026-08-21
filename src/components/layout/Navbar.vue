@@ -124,7 +124,7 @@ const toggleTheme = () => {
           type="checkbox"
           class="toggle toggle-sm language-toggle"
           id="language-toogle"
-          checked=" true"
+          :checked="currentLanguage"
           @change="toggleLanguage"
         />
         <span>ES</span>
