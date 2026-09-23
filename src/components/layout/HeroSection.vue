@@ -50,12 +50,28 @@ onMounted(() => {
           </div>
 
           <!-- Título -->
-          <h1 class="text-5xl font-bold">
+          <h1 class="text-5xl font-bold mb-3">
             {{ $t("hero.title") }}<span class="text-blue-500">Esteban</span>!
           </h1>
 
+          <!-- Badges de especialidad -->
+          <div class="flex flex-wrap gap-2 mb-2 justify-center lg:justify-start">
+            <span class="badge badge-outline rounded-lg text-xs font-semibold px-3 py-2.5">
+              <Icon icon="mdi:code-tags" class="w-3.5 h-3.5 mr-1" />
+              Fullstack Developer
+            </span>
+            <span class="badge badge-outline rounded-lg text-xs font-semibold px-3 py-2.5">
+              <Icon icon="mdi:cloud-sync" class="w-3.5 h-3.5 mr-1" />
+              Cloud & DevOps Specialist
+            </span>
+            <span class="badge badge-outline rounded-lg text-xs font-semibold px-3 py-2.5">
+              <Icon icon="mdi:shield-check" class="w-3.5 h-3.5 mr-1" />
+              Cybersecurity
+            </span>
+          </div>
+
           <!-- Descripción -->
-          <p class="py-6 text-xl">
+          <p class="py-4 text-lg text-base-content/90 leading-relaxed">
             {{ $t("hero.description") }}
           </p>
 
@@ -69,7 +85,7 @@ onMounted(() => {
 
             <!-- Email — CTA secundario -->
             <a
-              href="mailto:esteban.restrepo.11@gmail.com"
+              href="mailto:juanes_11@hotmail.com"
               class="btn btn-outline rounded-lg hover:scale-105 transition-transform duration-200"
             >
               <Icon icon="mdi:email" width="22" height="22" />

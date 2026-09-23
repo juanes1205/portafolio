@@ -16,6 +16,10 @@ const props = defineProps({
     type: String,
     required: true,
   },
+  bullets: {
+    type: Array,
+    default: () => [],
+  },
   url: {
     type: String,
     required: false,
@@ -64,13 +68,26 @@ const props = defineProps({
         </time>
       </div>
 
-      <!-- Columna derecha: descripción, tags, link -->
+      <!-- Columna derecha: descripción, bullets, tags, link -->
       <div class="flex-grow">
         <p
-          class="mb-4 text-sm font-normal text-base-content/80 leading-relaxed"
+          v-if="description"
+          class="mb-3 text-sm font-normal text-base-content/80 leading-relaxed"
         >
           {{ description }}
         </p>
+
+        <!-- Bullets detallados de logros y responsabilidades -->
+        <ul v-if="bullets && bullets.length" class="mb-4 space-y-2 text-sm text-base-content/85">
+          <li
+            v-for="(bullet, idx) in bullets"
+            :key="idx"
+            class="flex items-start gap-2.5 leading-relaxed"
+          >
+            <span class="inline-block w-1.5 h-1.5 rounded-full bg-blue-400 mt-2 flex-shrink-0"></span>
+            <span>{{ bullet }}</span>
+          </li>
+        </ul>
 
         <!-- Tags de tecnologías -->
         <div v-if="tags.length" class="flex flex-wrap gap-2 mb-3">

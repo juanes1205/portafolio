@@ -21,7 +21,7 @@ const projectsList = [
     altText: "Sistema_CVI",
     githubUrl: "https://github.com/juanes1205/sistema_cvi",
     previewUrl: "",
-    type: "web",
+    type: "Fullstack",
   },
   {
     titleKey: "projects.proy.1.title",
@@ -35,7 +35,7 @@ const projectsList = [
     altText: "MSN",
     githubUrl: "https://github.com/juanes1205/msn",
     previewUrl: "",
-    type: "web",
+    type: "Fullstack",
   },
   {
     titleKey: "projects.proy.2.title",
@@ -50,12 +50,12 @@ const projectsList = [
     altText: "ADVentas",
     githubUrl: "",
     previewUrl: "",
-    type: "web",
+    type: "Web App",
   },
   {
     titleKey: "projects.proy.3.title",
     descriptionKey: "projects.proy.3.description",
-    technologies: ["NodeJs","Express", "React Native","SQLite"],
+    technologies: ["React Native", "SQLite"],
     images: [
       "/proyectos/Pokemon/01.jpg",
       "/proyectos/Pokemon/02.jpg",
@@ -65,7 +65,7 @@ const projectsList = [
     altText: "Pokemon",
     githubUrl: "https://github.com/juanes1205/pokemon_react_native",
     previewUrl: "",
-    type: "web",
+    type: "Mobile",
   },
 ];
 
@@ -74,9 +74,8 @@ const filters = [
   { key: "Laravel", label: "Laravel" },
   { key: "VueJs", label: "Vue.js" },
   { key: "PHP", label: "PHP" },
-  { key: "Node.js", label: "Node.js" },
-  { key: "Express", label: "Express" },
   { key: "React Native", label: "React Native" },
+  { key: "MariaDB", label: "MariaDB" },
   { key: "SQLite", label: "SQLite" },
 ];
 

@@ -283,10 +283,18 @@ const techIcons = {
 
       <!-- CONTENIDO -->
       <div class="w-full md:w-1/2 flex flex-col gap-4">
-        <!-- Título -->
-        <h3 class="text-2xl font-bold">
-          {{ title }}
-        </h3>
+        <!-- Título y Tipo de proyecto -->
+        <div class="flex flex-wrap items-center gap-3">
+          <h3 class="text-2xl font-bold text-base-content">
+            {{ title }}
+          </h3>
+          <span
+            v-if="type"
+            class="badge badge-primary font-semibold text-xs py-2 px-3 uppercase tracking-wider shadow-sm"
+          >
+            {{ type }}
+          </span>
+        </div>
 
         <!-- Tecnologías e iconos -->
         <div class="flex flex-wrap gap-2">
@@ -303,11 +311,6 @@ const techIcons = {
             {{ tech }}
           </span>
         </div>
-
-        <!-- Tipo oculto -->
-        <span class="hidden" :value="type">
-          {{ type }}
-        </span>
 
         <!-- Descripción -->
         <div class="rounded-lg">

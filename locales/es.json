@@ -34,10 +34,18 @@
     },
     "experience": {
       "1": {
-        "title": "Líder de Infraestructura Cloud y On-Premise",
+        "title": "Líder de Infraestructura y Desarrollador Fullstack",
         "company": "Psicol S.A.S.",
         "date": "Julio 2022 - Junio 2026",
-        "description": "Experiencia trabajando con más de 50 aplicaciones en ambientes de Desarrollo, QA y Producción, participando en despliegues, administración de bases de datos e integración mediante APIs REST. Implementé soluciones con Docker, Docker Compose, Apache, Nginx y AWS, complementando el desarrollo y operación de aplicaciones con automatización, monitoreo y prácticas de ciberseguridad.",
+        "description": "Desarrollo web y gestión integral de arquitectura de software e infraestructura para más de 50 aplicaciones empresariales en ambientes de Dev, QA y Producción, garantizando alta disponibilidad, seguridad y optimización de recursos.",
+        "bullets": [
+          "Participé en el desarrollo y evolución de aplicaciones web empresariales utilizando PHP (Laravel), JavaScript y MySQL/MariaDB, implementando lógica de negocio, módulos CRUD e integración de APIs REST.",
+          "Administré y configuré entornos para más de 50 aplicaciones, realizando despliegues continuos sobre servidores Linux utilizando Docker, Docker Compose, Nginx y Apache.",
+          "Automaticé flujos de infraestructura mediante IaC y scripts, reduciendo tiempos de despliegue en un 15 % y disminuyendo errores operativos en un 20 %.",
+          "Diseñé e implementé monitoreo centralizado con Grafana para más de 50 aplicaciones y 10 servidores, reduciendo el tiempo de detección de fallas e incidentes en un 15 %.",
+          "Lideré la administración de infraestructura Cloud (AWS) y On-Premise, manteniendo una disponibilidad superior al 99.9 % en servicios críticos.",
+          "Fortalecí la ciberseguridad en aplicaciones y servidores (certificados SSL/TLS, hardening, gestión de vulnerabilidades), mitigando más de 130 hallazgos de seguridad."
+        ],
         "actions": {
           "view": "Ver detalles"
         }
@@ -46,7 +54,13 @@
         "title": "Auxiliar de Sistemas",
         "company": "Vehículos del Camino",
         "date": "Noviembre 2017 - Julio 2022",
-        "description": "Soporte y administración de plataformas empresariales y bases de datos utilizadas por más de 200 usuarios. Automatización de procesos mediante PowerShell y soporte a aplicaciones sobre servidores Windows y Linux, complementado con administración de VMware, Hyper-V, Active Directory y redes corporativas.",
+        "description": "Soporte técnico de segundo nivel, administración de bases de datos relacionales y automatización de procesos corporativos bajo metodologías ITIL.",
+        "bullets": [
+          "Administré y optimicé consultas en bases de datos relacionales, mejorando el desempeño y la estabilidad de aplicaciones corporativas utilizadas por más de 200 usuarios.",
+          "Automaticé procesos operativos y administrativos mediante scripting en PowerShell, reduciendo tiempos de ejecución en un 15 %.",
+          "Brindé soporte técnico de segundo nivel a infraestructura y plataformas bajo metodologías ITIL, asegurando el cumplimiento de los SLA.",
+          "Administré servidores en entornos Windows Server, VMware y Hyper-V, participando en la gestión de seguridad y respaldos de información."
+        ],
         "actions": {
           "view": "Ver detalles"
         }
@@ -191,6 +205,7 @@
       }
     },
     "certsList": {
+      "agile": "Metodologías Ágiles – Universidad Católica de Oriente (40h)",
       "javascript": "JavaScript (Básico y Práctico) – Platzi (38h)",
       "aws": "AWS Certified Solutions Architect Associate – Udemy (30h)",
       "cybersec": "Introduction to Cybersecurity – Cisco",

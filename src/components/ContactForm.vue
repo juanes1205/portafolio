@@ -56,11 +56,11 @@ const handleSubmit = async () => {
       <!-- Direct Contact Links -->
       <div class="flex flex-wrap justify-center gap-4 mb-8">
         <a
-          href="mailto:esteban.restrepo.11@gmail.com"
+          href="mailto:juanes_11@hotmail.com"
           class="btn btn-sm btn-ghost hover:bg-primary/20 rounded-lg flex items-center gap-2"
         >
           <Icon icon="mdi:email" class="w-4 h-4 text-blue-500" />
-          esteban.restrepo.11@gmail.com
+          juanes_11@hotmail.com
         </a>
         <a
           href="https://www.linkedin.com/in/juan-esteban-restrepo-978a8b7b"

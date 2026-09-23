@@ -43,6 +43,10 @@ const certifications = [
     key: "cybersec",
     icon: "mdi:security",
   },
+  {
+    key: "agile",
+    icon: "mdi:account-group-outline",
+  },
 ];
 </script>
 

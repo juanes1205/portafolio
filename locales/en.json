@@ -34,10 +34,18 @@
     },
     "experience": {
       "1": {
-        "title": "Cloud and On-Premise Infrastructure Lead",
+        "title": "Infrastructure Lead & Fullstack Developer",
         "company": "Psicol S.A.S.",
         "date": "July 2022 - June 2026",
-        "description": "Experience working with more than 50 applications across Development, QA, and Production environments, contributing to deployments, database administration, and REST API integration. Implemented solutions using Docker, Docker Compose, Apache, Nginx, and AWS, complementing application development and operations with automation, monitoring, and cybersecurity practices.",
+        "description": "Fullstack web development and complete software architecture & infrastructure management for 50+ enterprise apps across Dev, QA, and Production environments, ensuring high availability, security, and resource optimization.",
+        "bullets": [
+          "Developed and evolved enterprise web applications using PHP (Laravel), JavaScript, and MySQL/MariaDB, implementing business logic, CRUD modules, and REST APIs.",
+          "Managed and configured environments for 50+ applications, executing continuous deployments on Linux servers using Docker, Docker Compose, Nginx, and Apache.",
+          "Automated infrastructure workflows via IaC and scripts, reducing deployment time by 15% and operational errors by 20%.",
+          "Designed and implemented centralized monitoring with Grafana for 50+ applications and 10 servers, reducing incident detection time by 15%.",
+          "Led AWS Cloud and On-Premise infrastructure administration, maintaining >99.9% uptime for critical services.",
+          "Strengthened web application and server cybersecurity (SSL/TLS, hardening, vulnerability management), mitigating over 130 security findings."
+        ],
         "actions": {
           "view": "View details"
         }
@@ -46,7 +54,13 @@
         "title": "IT Systems Assistant",
         "company": "Vehículos del Camino",
         "date": "November 2017 - July 2022",
-        "description": "Supported and administered enterprise platforms and databases used by more than 200 users. Automated processes using PowerShell and supported applications running on Windows and Linux servers, complemented by administration of VMware, Hyper-V, Active Directory, and corporate networks.",
+        "description": "Tier-2 technical support, relational database administration, and corporate process automation following ITIL framework.",
+        "bullets": [
+          "Managed and optimized relational database queries, improving performance and stability for corporate applications used by 200+ users.",
+          "Automated operational and administrative processes via PowerShell scripting, reducing execution time by 15%.",
+          "Provided L2 technical support for software platforms and infrastructure under ITIL guidelines, ensuring SLA compliance.",
+          "Administered Windows Server, VMware, and Hyper-V server environments, leading security management and data backups."
+        ],
         "actions": {
           "view": "View details"
         }
@@ -191,6 +205,7 @@
       }
     },
     "certsList": {
+      "agile": "Agile Methodologies – Eastern Catholic University (40h)",
       "aws": "AWS Certified Solutions Architect Associate – Udemy (30h)",
       "cybersec": "Introduction to Cybersecurity – Cisco",
       "sql": "Databases: Advanced SQL Language (DDL & DML) – SENA (40h)",

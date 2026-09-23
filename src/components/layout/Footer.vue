@@ -107,7 +107,7 @@ import { RouterLink } from "vue-router";
             </a>
             <!-- Email -->
             <a
-              href="mailto:esteban.restrepo.11@gmail.com"
+              href="mailto:juanes_11@hotmail.com"
               aria-label="Correo electrónico"
               class="btn btn-ghost btn-circle hover:bg-purple-600 hover:text-white transition-all duration-300"
             >

@@ -30,16 +30,18 @@ import Certifications from "@/components/Certifications.vue";
             :company="$t('timeline.experience.1.company')"
             :date="$t('timeline.experience.1.date')"
             :description="$t('timeline.experience.1.description')"
+            :bullets="$tm('timeline.experience.1.bullets')"
             :current="true"
-            :tags="['JavaScript','HTML','CSS','Vue.js', 'PHP', 'Laravel','AWS', 'Docker', 'Linux', 'Nginx' , 'DevOps']"
+            :tags="['JavaScript','PHP', 'Laravel','Vue.js', 'MySQL/MariaDB', 'AWS', 'Docker', 'Linux', 'Nginx', 'Grafana', 'IaC', 'DevOps', 'Ciberseguridad']"
           />
           <TimeLine
             :title="$t('timeline.experience.2.title')"
             :company="$t('timeline.experience.2.company')"
             :date="$t('timeline.experience.2.date')"
             :description="$t('timeline.experience.2.description')"
+            :bullets="$tm('timeline.experience.2.bullets')"
             :current="false"
-            :tags="['PowerShell', 'VMware', 'Hyper-V', 'Active Directory', 'Windows Server', 'Linux']"
+            :tags="['PowerShell', 'SQL Optimization', 'VMware', 'Hyper-V', 'Active Directory', 'Windows Server', 'Linux', 'ITIL']"
           />
         </ol>
       </div>
@@ -61,7 +63,7 @@ import Certifications from "@/components/Certifications.vue";
                 :images="['/proyectos/Sistema_CVI/01.jpg']"
                 altText="Sistema_CVI"
                 url=""
-                type="web"
+                type="Fullstack"
                 githubUrl="https://github.com/juanes1205/sistema_cvi"
                 previewUrl=""
               />
@@ -77,7 +79,7 @@ import Certifications from "@/components/Certifications.vue";
                 :images="['/proyectos/MSN/01.jpg']"
                 altText="MSN"
                 url=""
-                type="web"
+                type="Web App"
                 githubUrl="https://github.com/juanes1205/msn"
                 previewUrl=""
               />
